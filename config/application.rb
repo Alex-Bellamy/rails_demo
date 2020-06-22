@@ -21,6 +21,14 @@ Bundler.require(*Rails.groups)
 
 module RailsDemo
   class Application < Rails::Application
+    config.generators do |generate|
+      generate.helper false
+      generate.assets false
+      generate.view_specs false
+      generate.helper_specs false
+      generate.routing_specs false
+      generate.controller_specs false
+    end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
